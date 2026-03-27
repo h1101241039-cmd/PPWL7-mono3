@@ -15,7 +15,9 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
 
   const check = env.VITE_CHECK;
-  if (!check) throw new Error("env is not detected");
+  if (!check) {
+  console.warn("env not detected, fallback mode");
+}
   console.log("Berhasil env:", check)
 
   return {
