@@ -1,6 +1,7 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "$schema": "https://monorepo-be-three.vercel.app",
   "bunVersion": "1.x",
   "installCommand": "bun install",
+  "buildCommand": "bun run build",
   "outputDirectory": "dist"
 }
