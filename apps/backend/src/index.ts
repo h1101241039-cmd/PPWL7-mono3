@@ -97,8 +97,11 @@ const app = new Elysia()
 
     if (!session) return;
 
-    session.value = sessionId;
-    session.maxAge = 60 * 60 * 24;
+  session.value = sessionId;
+  session.maxAge = 60 * 60 * 24;
+  session.httpOnly = true;
+  session.secure = true;
+  session.sameSite = "none";
 
     // ✅ dynamic URL
     return redirect(`${process.env.FRONTEND_URL}/classroom`);
